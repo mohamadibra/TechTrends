@@ -280,6 +280,7 @@ data = go.Choropleth(
 
 layout = go.Layout(
     title='Country Distribution',
+    dragmode=False,
     geo=dict(
         showframe=False,
         showcoastlines=False,
