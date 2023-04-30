@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(layout="wide",page_title='Tech Trends',page_icon=':chart_with_upwards_trend:')
+st.set_page_config(layout="wide",page_title='Tech Trends')
 
 demog = pd.read_csv('m5_survey_data_demographics.csv')
 tech = pd.read_csv('m5_survey_data_technologies_normalised.csv')
