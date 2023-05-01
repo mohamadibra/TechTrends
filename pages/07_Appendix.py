@@ -11,7 +11,7 @@ st.title("Appendix")
 rel_bash = tech_demog[tech_demog['LanguageWorkedWith'] == 'Bash/Shell/PowerShell']
 rel_bash = rel_bash.groupby('PlatformWorkedWith').count().sort_values('Respondent',ascending=False).reset_index()
 rel_bash = rel_bash[['PlatformWorkedWith','Respondent']]
-st.subheader("Answering the question: Why are Bash/Shell/PowerShell among the top languages used? Here's a diagram of each platform to which this language contributes.")
+st.subheader("Why are Bash/Shell/PowerShell among the most popular programming languages? The graphic below depicts each platform to which this language contributes.")
 fig = px.bar(rel_bash,x='Respondent',y='PlatformWorkedWith',orientation='h')
 fig.update_layout(dragmode=False, selectdirection=None,xaxis_title="Number of Respondents",yaxis_title="Platform using Bash/Shell/Powershell",title='Bash/Shell/PowerShell Langauge Users for each Platform',width=400,margin=dict(l=0, r=0, t=170, b=0))
 st.plotly_chart(fig)
